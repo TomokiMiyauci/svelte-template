@@ -29,7 +29,12 @@ export default {
                 "defaults": {
                     "script": "typescript",
                     "style": "scss"
-                }
+                },
+                "postcss": {
+                    "plugins": [require("autoprefixer")()]
+                },
+                "sourceMap": production
+
             })
 
             /*
