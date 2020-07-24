@@ -27,7 +27,8 @@ export default {
 
             "preprocess": sveltePreprocess({
                 "defaults": {
-                    "script": "typescript"
+                    "script": "typescript",
+                    "style": "scss"
                 }
             })
 

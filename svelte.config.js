@@ -1,7 +1,8 @@
 module.exports = {
     "preprocess": require("svelte-preprocess")({
         "defaults": {
-            "script": "typescript"
+            "script": "typescript",
+            "style": "scss"
         }
     })
 };
