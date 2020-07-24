@@ -1,3 +1,6 @@
+import path from 'path'
+
+import alias from '@rollup/plugin-alias'
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
@@ -7,7 +10,7 @@ import { terser } from 'rollup-plugin-terser'
 
 const production = !process.env.ROLLUP_WATCH
 const svelteConfig = require('./svelte.config')
-console.log(svelteConfig)
+
 export default {
   input: 'src/main.ts',
   output: {
@@ -17,6 +20,14 @@ export default {
     sourcemap: true,
   },
   plugins: [
+    alias({
+      entries: [
+        {
+          find: '@',
+          replacement: path.resolve(__dirname, 'src', 'components'),
+        },
+      ],
+    }),
     svelte({
       // Enable run-time checks when not in production
       css: (css) => {
