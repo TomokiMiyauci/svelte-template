@@ -1,13 +1,13 @@
 import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
-import { transformSync } from 'esbuild'
 import livereload from 'rollup-plugin-livereload'
 import svelte from 'rollup-plugin-svelte'
 import { terser } from 'rollup-plugin-terser'
-import sveltePreprocess from 'svelte-preprocess'
-const production = !process.env.ROLLUP_WATCH
 
+const production = !process.env.ROLLUP_WATCH
+const svelteConfig = require('./svelte.config')
+console.log(svelteConfig)
 export default {
   input: 'src/main.ts',
   output: {
@@ -24,27 +24,7 @@ export default {
       },
       dev: !production,
 
-      preprocess: sveltePreprocess({
-        defaults: {
-          script: 'typescript',
-          style: 'scss',
-        },
-        postcss: {
-          plugins: [require('autoprefixer')()],
-        },
-        scss: {
-          prependData: "@import 'src/styles/variables.scss';",
-        },
-        sourceMap: production,
-
-        typescript({ content }) {
-          const { js: code } = transformSync(content, {
-            loader: 'ts',
-          })
-
-          return { code }
-        },
-      }),
+      ...svelteConfig,
 
       /*
        * We'll extract any component CSS out into
