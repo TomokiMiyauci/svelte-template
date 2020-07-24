@@ -524,6 +524,11 @@ error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
+esbuild@^0.6.5:
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.6.5.tgz#efbe11cf51abd0d4d489ca1bc80fd4761a35bd16"
+  integrity sha512-glMZd0b6W2soHuUuchM6c55e6gbdDhVpvYcmLsH3OJo87hQZcb3lFPZAJ5MbzLCJa2bChQOaoC4bqVtbqfsM/A==
+
 escalade@^3.0.1:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.0.2.tgz#6a580d70edb87880f22b4c91d0d56078df6962c4"

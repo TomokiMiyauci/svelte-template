@@ -4,6 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import svelte from "rollup-plugin-svelte";
 import sveltePreprocess from "svelte-preprocess";
 import {terser} from "rollup-plugin-terser";
+import {transformSync} from "esbuild";
 import typescript from "@rollup/plugin-typescript";
 const production = !process.env.ROLLUP_WATCH;
 
@@ -36,8 +37,20 @@ export default {
                 "scss": {
                     "prependData": "@import 'src/styles/variables.scss';"
                 },
-                "sourceMap": production
+                "sourceMap": production,
 
+                typescript ({content}) {
+
+                    const {"js": code} = transformSync(
+                        content,
+                        {
+                            "loader": "ts"
+                        }
+                    );
+
+                    return {code};
+
+                }
 
             })
 
