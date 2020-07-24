@@ -9,8 +9,8 @@
     "browser": true,
     "node": true
   },
-  "plugins": ["svelte3"],
-  "extends": ["eslint:all"],
+  "plugins": ["svelte3", "prettier"],
+  "extends": ["eslint:all", "prettier"],
   "overrides": [
     {
       "files": ["*.svelte"],
