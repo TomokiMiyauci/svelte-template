@@ -266,9 +266,9 @@
     unist-util-find-all-after "^3.0.1"
 
 "@tsconfig/svelte@^1.0.0":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@tsconfig/svelte/-/svelte-1.0.2.tgz#0c4677de1804e395c2e071533a47fda5cfea9914"
-  integrity sha512-GkTFn433Sw5mnrrA0iB0SXubgFu51cwU8qDCeTmCwrhMEaz0pERPgODfXf50jpiUZstuNdqGUlygtaYGhpWz2Q==
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@tsconfig/svelte/-/svelte-1.0.3.tgz#7e29c4fd771af94faa3e5dde4b717a1ad8625583"
+  integrity sha512-rk+BuV7fNAE33bywtzgNCbPSVEITOeR9zFPeHHJaD9lTcmjZQQRe5fOGJtsdyG3JJKoAZ4JSYVbll4CvWhC3sA==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -2495,9 +2495,9 @@ rollup-pluginutils@^2.8.2:
     estree-walker "^0.6.1"
 
 rollup@^2.3.4:
-  version "2.22.2"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.22.2.tgz#94d51fc8c30a2e545d1ff6358cc4fa14131332ee"
-  integrity sha512-2a4Mch4f0W2lEvkPuxtz0GfrtfgLj9bdd/oC9L3LozGOCnmLqO7ivMfKbCJoRgqWIU2UqAcbxRFSwmIKx+uStA==
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.23.0.tgz#b7ab1fee0c0e60132fd0553c4df1e9cdacfada9d"
+  integrity sha512-vLNmZFUGVwrnqNAJ/BvuLk1MtWzu4IuoqsH9UWK5AIdO3rt8/CSiJNvPvCIvfzrbNsqKbNzPAG1V2O4eTe2XZg==
   optionalDependencies:
     fsevents "~2.1.2"
 
