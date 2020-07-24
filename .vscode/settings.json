@@ -1,6 +1,10 @@
 {
-  "eslint.validate": [
-    "svelte"
-  ],
-  "eslint.packageManager": "yarn"
+  "eslint.packageManager": "yarn",
+  "prettier.packageManager": "yarn",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.format.enable": false,
+
+  "editor.formatOnSave": true
 }
