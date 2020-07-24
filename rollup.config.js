@@ -25,7 +25,11 @@ export default {
             },
             "dev": !production,
 
-            "preprocess": sveltePreprocess()
+            "preprocess": sveltePreprocess({
+                "defaults": {
+                    "script": "typescript"
+                }
+            })
 
             /*
              * We'll extract any component CSS out into
