@@ -33,7 +33,11 @@ export default {
                 "postcss": {
                     "plugins": [require("autoprefixer")()]
                 },
+                "scss": {
+                    "prependData": "@import 'src/styles/variables.scss';"
+                },
                 "sourceMap": production
+
 
             })
 

@@ -3,6 +3,9 @@ module.exports = {
         "defaults": {
             "script": "typescript",
             "style": "scss"
+        },
+        "scss": {
+            "prependData": "@import 'src/styles/variables.scss';"
         }
     })
 };
