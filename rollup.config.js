@@ -1,11 +1,11 @@
 import commonjs from '@rollup/plugin-commonjs'
-import livereload from 'rollup-plugin-livereload'
 import resolve from '@rollup/plugin-node-resolve'
-import svelte from 'rollup-plugin-svelte'
-import sveltePreprocess from 'svelte-preprocess'
-import { terser } from 'rollup-plugin-terser'
-import { transformSync } from 'esbuild'
 import typescript from '@rollup/plugin-typescript'
+import { transformSync } from 'esbuild'
+import livereload from 'rollup-plugin-livereload'
+import svelte from 'rollup-plugin-svelte'
+import { terser } from 'rollup-plugin-terser'
+import sveltePreprocess from 'svelte-preprocess'
 const production = !process.env.ROLLUP_WATCH
 
 export default {
